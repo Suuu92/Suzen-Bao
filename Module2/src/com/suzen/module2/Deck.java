@@ -5,7 +5,8 @@ import java.util.LinkedList;
 
 public class Deck {
     LinkedList<Card> deck = new LinkedList<>();
-
+    
+    //Create a deck of 52 cards
     public Deck() {
         for(int i = 1; i < 14; i++) {
             deck.add(new Card(i, Suit.CLUBS));
@@ -31,6 +32,7 @@ public class Deck {
         return deck;
     }
 
+    //Create a copy of the deck and poll a hand of 7 cards
     LinkedList<Card> hand = new LinkedList<>(deck);
     public void drawHand() {
         for (int i = 0; i < 7; i++) {
