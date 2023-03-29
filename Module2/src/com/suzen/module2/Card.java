@@ -24,6 +24,19 @@ public class Card {
     public void setSuit(Suit suit) {
         this.suit = suit;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Card)) return false;
+        Card card = (Card) o;
+        return getValue() == card.getValue() && getSuit() == card.getSuit();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getValue(), getSuit());
+    }
 
     @Override
     public String toString() {
