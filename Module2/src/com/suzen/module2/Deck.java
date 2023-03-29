@@ -44,6 +44,19 @@ public class Deck {
     public LinkedList<Card> getHand() {
         return hand;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Deck)) return false;
+        Deck deck1 = (Deck) o;
+        return Objects.equals(getDeck(), deck1.getDeck()) && Objects.equals(getHand(), deck1.getHand());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getDeck(), getHand());
+    }
 
     @Override
     public String toString() {
