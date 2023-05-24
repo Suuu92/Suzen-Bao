@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="609.0" prefWidth="706.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label alignment="TOP_CENTER" prefHeight="44.0" prefWidth="144.0" text="Friends Book">
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Label>
+    <TabPane prefHeight="529.0" prefWidth="423.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="New Friend">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="423.0">
+                        <children>
+                            <HBox alignment="TOP_CENTER" layoutY="14.0" prefHeight="25.0" prefWidth="423.0" />
+                            <Button fx:id="btnGetFriend" alignment="TOP_CENTER" layoutX="170.0" layoutY="187.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="27.0" prefWidth="122.0" text="Add a friend">
+                                <font>
+                                    <Font size="13.0" />
+                                </font></Button>
+                            <Label alignment="CENTER" layoutX="113.0" layoutY="77.0" prefHeight="21.0" prefWidth="40.0" text="Age:">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="textGetAge" layoutX="163.0" layoutY="75.0" promptText="Age" />
+                            <Label alignment="CENTER" layoutX="94.0" layoutY="120.0" prefHeight="25.0" prefWidth="70.0" text="Contact:">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="textGetContact" layoutX="163.0" layoutY="120.0" promptText="Contact" />
+
+                            <Label fx:id="welcomeText" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="34.0" prefHeight="37.0" prefWidth="58.0" text="Name:">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="textGetName" alignment="TOP_LEFT" layoutX="164.0" layoutY="34.0" prefHeight="0.0" prefWidth="160.0" promptText="Friend Name" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Display Friends">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <ListView fx:id="friendList" layoutX="14.0" layoutY="14.0" onMouseClicked="#displayFriend" prefHeight="312.0" prefWidth="307.0" />
+                            <Label alignment="CENTER" layoutX="430.0" layoutY="14.0" prefHeight="21.0" prefWidth="134.0" text="Friend Information">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="379.0" layoutY="106.0" text="Age:">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="379.0" layoutY="57.0" text="Name:">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="378.0" layoutY="154.0" text="Contact:">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lblContact" layoutX="448.0" layoutY="154.0">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lblAge" layoutX="447.0" layoutY="106.0">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lblName" layoutX="446.0" layoutY="57.0">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnSaveFriend" layoutX="404.0" layoutY="217.0" mnemonicParsing="false" onAction="#saveFriend" text="Save">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnLoadFriend" layoutX="514.0" layoutY="217.0" mnemonicParsing="false" onAction="#loadFriend" text="Load All">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Button>
+                     <Button fx:id="btnLoadPeers" layoutX="362.0" layoutY="269.0" mnemonicParsing="false" onAction="#loadPeers" text="Peer Friends" />
+                     <Button fx:id="btnLoadWork" layoutX="514.0" layoutY="269.0" mnemonicParsing="false" onAction="#loadWork" text="Work Friends" />
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>
